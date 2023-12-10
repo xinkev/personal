@@ -95,7 +95,7 @@ class FormState(...){
 }
 ```
 And bind this to the button:
-```
+```kotlin
 Button(
     enabled = state.buttonEnabled
 )
