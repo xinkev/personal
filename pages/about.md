@@ -1,8 +1,8 @@
 ---
 title: About me
+permalink: /
 metaDescription: "Kevin: Experienced software developer specializing in Android and frontend development with Typescript, React, and TailwindCSS. Dedicated to crafting efficient, user-friendly digital solutions."
 date: 2023-12-10T06:53:28.885Z
-permalink: /about/index.html
 eleventyNavigation:
   key: About
   order: 1
