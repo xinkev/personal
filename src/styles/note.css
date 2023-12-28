@@ -1,0 +1,51 @@
+.note {
+  @apply mx-auto flex w-full max-w-prose flex-col gap-4 text-lg break-words;
+}
+.note p {
+  @apply leading-7;
+}
+
+.note code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-orange-500;
+}
+
+.note h1 {
+  @apply text-4xl text-neutral-300;
+}
+
+.note h2 {
+  @apply mt-6 text-3xl text-neutral-100;
+}
+
+.note h3 {
+  @apply mt-4 text-xl text-neutral-100;
+}
+
+.note code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-red-500;
+}
+
+.note a {
+  @apply text-neutral-100 underline;
+}
+
+.note ul {
+  @apply list-disc;
+}
+
+.note blockquote {
+  @apply flex flex-col gap-2 relative pl-4;
+}
+
+.note blockquote::before {
+  @apply absolute block left-0 top-0 h-full w-1 bg-red-400 content-[''];
+}
+
+
+.note pre {
+  @apply p-4;
+}
+
+.note pre > code {
+  @apply bg-transparent;
+}
