@@ -25,7 +25,7 @@ class DebounceViewModel : ViewModel() {
     }
 }
 ```
-This method involves a ViewModel (`VM`) that debounces and processes the input text. Here, `debounce(2000)` ensures a 2-second delay between user inputs before processing, reducing unnecessary database queries or operations. `distinctUntilChanged` prevents repeated processing of the same input, while `flatMapLatest` ensures only the latest input is considered.
+This method involves a ViewModel (`DebounceViewModel`) that debounces and processes the input text. Here, `debounce(300)` ensures a 300-millisecond delay between user inputs before processing, reducing unnecessary database queries or operations. `distinctUntilChanged` prevents repeated processing of the same input, while `flatMapLatest` ensures only the latest input is considered.
 
 ### Composable Function Approach
 ```kotlin
@@ -41,12 +41,12 @@ fun DebouncingTextField(onInputChanged: (String) -> Unit) {
 
     LaunchedEffect(key1 = textState) {
         if (textState.text.isNotEmpty()) {
-            delay(2500)
+            delay(300)
             onInputChanged(textState.text)
         }
     }
 }
 ```
-This Composable function that utilizes `LaunchedEffect` with a 2-second delay (`delay(2000L)`) to debounce the input. The function reacts only to non-empty inputs and invokes `onInputChanged` after the specified delay, ensuring the application's responsiveness and efficiency in handling user inputs.
+This Composable function that utilizes `LaunchedEffect` with a 300-millisecond delay (`delay(300)`) to debounce the input. The function reacts only to non-empty inputs and invokes `onInputChanged` after the specified delay, ensuring the application's responsiveness and efficiency in handling user inputs.
 
 Both methods present practical and adaptable solutions for input debouncing in Compose. Depending on your application's requirements and structure, you may choose the one that best suits your needs.
